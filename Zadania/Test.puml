@@ -1,0 +1,47 @@
+@startuml
+class Engine {
+- int power
+- String fuelType
++ void startEngine()
++ void displayInfo()
++ int getPower()
++ String getFuelType()
+}
+
+
+class FuelTank {
+- double capacity
+- double currentLevel
+}
+
+class Car {
+- int passengerCapacity
++ void displayInfo()
+}
+
+
+class Vehicle {
+# String brand
+# String model
+# int year
+# double maxSpeed
+~ Engine engine
++ void displayInfo()
+}
+
+
+class Main {
++ {static} void main(String[])
+}
+
+class Truck {
+- double loadCapacity
++ void displayInfo()
+}
+
+
+
+
+Vehicle <|-- Car
+Vehicle <|-- Truck
+@enduml
